@@ -3,60 +3,73 @@ quiz_data = [
         'question': 'Как назывались мемуары, которые Лютик начал писать вскоре после дезертирства Геральта и его товарищей из армии королевы Мэвы?',
         'options': ['Пол века поэзии', 'Приключения Лютика и команды', 'Нелегкое бремя', 'Не признанный гений'],
         'correct_option': 0,
+        'incorrect_option': 1 or 2 or 3
     },
     {
         'question': 'Как зовут главного персонажа романа "Ведьмак"?',
         'options': ['Геральд', 'Лютик', 'Дийкстра', 'Золтан Хивай'],
-        'correct_option': 0
+        'correct_option': 0,
+        'incorrect_option': 1 or 2 or 3
     },
     {
         'question': 'К какой школе ведьмаков принадлежал Геральд из Ривии?',
         'options': ['Кота', 'Волка', 'Медведя', 'Грифона'],
-        'correct_option': 1
+        'correct_option': 1,
+        'incorrect_option': 0 or 2 or 3
     },
     {
         'question': 'Как называется первая книга в цикле романов "Ведьмак?',
         'options': ['Меч предназначения', 'Кровь эльфов', 'Последнее желание', 'Крещение огнем'],
-        'correct_option': 2
+        'correct_option': 2,
+        'incorrect_option': 1 or 0 or 3
     },
     {
         'question': 'В кого был влюблен Геральд из Ривии?',
         'options': ['Трисс Меригольд', 'Йеннифэр из Венгерберга', 'Нэннеке', 'Мильва'],
-        'correct_option': 1
+        'correct_option': 1,
+        'incorrect_option': 0 or 2 or 3
     },
     {
         'question': 'Каким существом являлся Эмиель Регис?',
         'options': ['Человек', 'Эльф', 'Допплер', 'Высший вампир'],
-        'correct_option': 3
+        'correct_option': 3,
+        'incorrect_option': 1 or 2 or 0
     },
     {
         'question': 'Кто такие Скоя’таэли?',
         'options': ['Партизанское движение', 'Сильнейшая банда эльфов', 'Орден торговцев', 'Бродячий цирк'],
-        'correct_option': 0
+        'correct_option': 0,
+        'incorrect_option': 1 or 2 or 3
     },
     {
         'question': 'Кто был королем Темерии?',
         'options': ['Везимир 1', 'Хенсельт', 'Радовид', 'Фольтест'],
-        'correct_option': 3
+        'correct_option': 3,
+        'incorrect_option': 1 or 2 or 0
     },
     {
         'question': 'Cколько чародеев погибло на Cодденском холме?',
         'options': ['12', '13', '14', '15'],
-        'correct_option': 1
+        'correct_option': 1,
+        'incorrect_option': 0 or 2 or 3
     },
     {
         'question': 'Как называлась банда, в которую попала Цири?',
         'options': ['Волки', 'Вепри', 'Крысы', 'Соколики'],
-        'correct_option': 2
+        'correct_option': 2,
+        'incorrect_option': 1 or 0 or 3
     },
     {
         'question': 'Кем являлась Цири?',
         'options': ['Принцессой', 'Дитя старшей крови', 'Ведьмачкой', 'Все ответы верны'],
-        'correct_option': 3
+        'correct_option': 3,
+        'incorrect_option': 1 or 2 or 0
     },
     {
         'question': 'В каком королевстве происходили основные события книги "Ведьмак. Сезон гроз"?',
         'options': ['Тимерия', 'Редания', 'Керак', 'Аедирн'],
-        'correct_option': 2
+        'correct_option': 2,
+        'incorrect_option': 1 or 0 or 3
     },
 ]
+

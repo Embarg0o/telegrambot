@@ -75,6 +75,9 @@ async def wrong_answer(callback: types.CallbackQuery):
     )
     current_question_index = await get_quiz_index(callback.from_user.id)
 
+    incorrect_option = quiz_data[current_question_index]['incorrect_option']
+    await callback.message.answer(f"Выбранный ответ: {quiz_data[current_question_index]['options'][incorrect_option]}")
+
     correct_option = quiz_data[current_question_index]['correct_option']
     await callback.message.answer(f"Неправильно. Правильный ответ: {quiz_data[current_question_index]['options'][correct_option]}")
 
