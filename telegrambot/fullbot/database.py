@@ -24,12 +24,6 @@ async def get_user_last_score(user_id):
             else:
                 return 0
 
-
-async def update_quiz_score(user_id, score):
-    async with aiosqlite.connect(DB_NAME) as db:
-        await db.execute('INSERT OR REPLACE INTO quiz_results (user_id, score) VALUES (?, ?)', (user_id, score))
-        await db.commit()
-
 async def get_quiz_index(user_id):
      # Подключаемся к базе данных
      async with aiosqlite.connect(DB_NAME) as db:
