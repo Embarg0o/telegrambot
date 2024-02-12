@@ -7,7 +7,7 @@ DB_NAME = 'quiz_bot.db'
 async def create_tables():
     async with aiosqlite.connect(DB_NAME) as db:
         await db.execute('''CREATE TABLE IF NOT EXISTS quiz_state (user_id INTEGER PRIMARY KEY, question_index INTEGER)''')
-        await db.execute('''CREATE TABLE IF NOT EXISTS quiz_results (user_id INTEGER PRIMARY KEY, score INTEGER)''')
+        await db.execute('''CREATE TABLE IF NOT EXISTS quiz_results (user_id INTEGER PRIMARY KEY, score INTEGER DEFAULT 0)''')
         await db.commit()
 
 async def save_user_score(user_id, score):
@@ -60,10 +60,9 @@ async def get_question(message, user_id):
     await message.answer(f"{quiz_data[current_question_index]['question']}", reply_markup=kb)
 
 async def new_quiz(message):
-    # получаем id пользователя, отправившего сообщение
     user_id = message.from_user.id
-    # сбрасываем значение текущего индекса вопроса квиза в 0
     current_question_index = 0
+    await save_user_score(user_id, 0)
     await update_quiz_index(user_id, current_question_index)
 
     # запрашиваем новый вопрос для квиза

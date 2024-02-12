@@ -32,6 +32,9 @@ async def right_answer(callback: types.CallbackQuery):
     await callback.message.answer(f"Выбранный ответ: {quiz_data[current_question_index]['options'][correct_option]}")
 
     await callback.message.answer("Верно!")
+    score = await get_user_last_score(callback.from_user.id)
+    score += 1
+    await save_user_score(callback.from_user.id, score)
 
     current_question_index += 1
     await update_quiz_index(callback.from_user.id, current_question_index)
@@ -89,7 +92,7 @@ async def cmd_quiz(message: types.Message):
 @dp.message(Command("stats"))
 async def cmd_stats(message: types.Message):
     user_id = message.from_user.id
-    score = await get_user_last_score(user_id)
+    score = await get_user_last_score(user_id) or 0
     await message.answer(f"Ваш результат: {score}")
 
 async def main():
